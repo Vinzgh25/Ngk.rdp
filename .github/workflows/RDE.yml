@@ -13,7 +13,7 @@ jobs:
     - name: Extract ngrok
       run: |
         Expand-Archive ngrok.zip
-        ngrok update
+        ./ngrok/ngrok.exe update
     - name: Authenticate with ngrok
       run: .\ngrok\ngrok.exe authtoken $Env:NGROK_AUTH_TOKEN
       env:
